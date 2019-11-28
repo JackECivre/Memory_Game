@@ -89,7 +89,7 @@ body {
 }
 
 .card-front {
-  background-color: grey;
+  background-color: rgba(114, 192, 240, 0.5);
   border-color: #333;
   transform: rotateY(180deg);
 }
@@ -119,12 +119,14 @@ body {
   transform: rotate(90deg);
   top: 0;
   left: 0;
+  z-index: 1;
 }
 
 .donut-top-right {
   transform: rotate(180deg);
   top: 0;
   right: 0;
+  z-index: 1;
 }
 
 .donut-bottom-left {
