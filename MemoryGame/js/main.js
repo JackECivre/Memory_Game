@@ -25,7 +25,7 @@ function flipCard() {
 }
 
 function checkForMatch() {
-  let isMatch = firstCard.dataset.name === secondCard.dataset.name;
+  let isMatch = firstCard.getElementsByClassName("card-value")[0].src === secondCard.getElementsByClassName("card-value")[0].src;
   isMatch ? disableCards() : unflipCards();
 }
 
