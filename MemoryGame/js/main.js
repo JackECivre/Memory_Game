@@ -50,11 +50,20 @@ function resetBoard() {
   secondCard = null;
 }
 
-(function shuffle() {
+function shuffle() {
   cards.forEach(card => {
     let randomPos = Math.ceil(Math.random() * 12);
     card.style.order = randomPos;
-  });
-})();
+  })
+};
+shuffle()
+
+function restart() {
+  setTimeout(() => {
+    location.reload()
+  }, 500);
+}
 
 cards.forEach(card => card.addEventListener('click', flipCard));
+
+
