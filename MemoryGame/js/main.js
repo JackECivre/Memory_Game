@@ -30,12 +30,16 @@ function checkForMatch() {
 }
 
 function disableCards() {
+  var audioElement = new Audio('./audio/woohoo.mp3');
+  audioElement.play();
   firstCard.removeEventListener('click', flipCard);
   secondCard.removeEventListener('click', flipCard);
   resetBoard();
 }
 
 function unflipCards() {
+  var audioElement = new Audio('./audio/doh.wav');
+  audioElement.play();
   setTimeout(() => {
     firstCard.classList.remove('visible');
     secondCard.classList.remove('visible');
@@ -61,9 +65,10 @@ shuffle()
 function restart() {
   setTimeout(() => {
     location.reload()
-  }, 500);
+  }, 4000);
+  var audioElement = new Audio('./audio/anyKey.wav');
+  audioElement.play();
 }
 
 cards.forEach(card => card.addEventListener('click', flipCard));
-
 
